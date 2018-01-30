@@ -1,39 +1,15 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<table class="tx-media-nmcad" >
-	<tr>
-		<td>
-			<f:translate key="tx_medianmcad_domain_model_media.name" />
-		</td>
-		<td>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_medianmcad_domain_model_media.description" />
-		</td>
-		<td>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_medianmcad_domain_model_media.image" />
-		</td>
-		<td>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_medianmcad_domain_model_media.published" />
-		</td>
-		<td>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_medianmcad_domain_model_media.files" />
-		</td>
-		<td>
-		</td>
-	</tr>
-</table>
+
+<div class="head" style="float:left">
+	<f:image image="{media.files.0}" treatIdAsReference="1" height="180px"/>
+</div>
+
+<div class="infos" style="margin:20px;">
+	<h3>{media.name}</h3>
+	<p>Ecrit par : blabla</p>
+	<p>Ajouté le : {media.published -> f:format.date()}</p>
+</div>
+
+<div style="margin:20px;"><f:format.html>{media.description}</f:format.html></div>
+
 </html>
